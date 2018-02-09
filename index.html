@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery.fullpage.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/accordion-slider.min.css" media="screen"/>
 	<script rel="stylesheet" href="https://cdnjs.com/libraries/fullPage.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -21,60 +21,397 @@
 	<script src="http://zikro.gr/dbg/html/fullPage/jquery.fullpage.js"></script>
 	<script href="js/jquery.fullPage.js"></script>
 	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.js"></script>
+
+	<script type="text/javascript" src="js/jquery.accordionSlider.min.js"></script>
 
 	<script type="text/javascript">
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
-					sectionsColor: ['black', 'black', 'black', 'whitesmoke', '#ccddff'],
-					anchors:['menu', 'about', 'jimhast'],
-					scrollingSpeed: 700
+					sectionsColor: ['black', 'black', 'black', 'black'],
+					anchors:['menu', 'about', 'artistas', 'cuervo', 'producciones', 'andy', 'xatarra', 'escena', 'sesiones'],
+					scrollingSpeed: 700,
+					responsiveWidth: 400,
+					responsiveHeight: 600,
 				});
+
+				$('#my-accordion').accordionSlider({
+					autoplay: false,
+					width: 1090,
+					height: 500,
+					responsive: true,
+					maxOpenedPanelSize: '100%',
+					closePanelsOnMouseOut: true,
+					breakpoints: {
+		        750: {orientation: 'vertical', width: 400, height: 600, visiblePanels: 5},
+    }
+				});
+
 			});
 	</script>
 </head>
 
+<!-- Remember to state anchor sections by same name in div anchor-link property, href with # tag and on script above IN ORDER-->
+
 <body>
 	<div id="fullpage">
+
+	<!-- Menu Section -->
+
 		<div data-anchor="menu" class="section active">
 			<div class="menu-full">	
 				<div class='circle-container'>
-			    <a href='#about' class='center 1111'><img src='img/1111.png'></a>
-			    <a href='#jimhast' class='deg0 jimhast'><img src='img/jimhast.png'></a>
-			    <a href='#' class='deg45 cuervo'><img src='img/cuervo.png'></a>
-			    <a href='#' class='deg90 producciones'><img src='img/producciones.png'></a>
-			    <a href='#' class='deg90 contacto'><img src='img/contacto.png'></a>
-			    <a href='#' class='deg135 andy'><img src='img/andy.png'></a>
-			    <a href='#' class='deg180 xatarra'><img src='img/xatarra.png'></a>
-			    <a href='#' class='deg210 escena'><img src='img/escena.png'></a>
-			    <a href='#' class='deg225 sesiones'><img src='img/sesiones.png'></a>
-			    <a href='#' class='deg315 amigos'><img src='img/amigos.png'></a>
+			    <a href='#about' class='center 1111 main-logo'><img src='img/1111.png'></a>
+			    <a href='#jimhast' class='deg0 jimhast mobile-title'><img src='img/jimhast.png'></a>
+			    <a href='#' class='deg45 cuervo mobile-title'><img src='img/cuervo.png'></a>
+			    <a href='#' class='deg90 producciones mobile-title'><img src='img/producciones.png'></a>
+			    <a href='#' class='deg90 contacto mobile-title'><img src='img/contacto.png'></a>
+			    <a href='#' class='deg135 andy mobile-title'><img src='img/andy.png'></a>
+			    <a href='#' class='deg180 xatarra mobile-title'><img src='img/xatarra.png'></a>
+			    <a href='#' class='deg210 escena mobile-title'><img src='img/escena.png'></a>
+			    <a href='#' class='deg225 sesiones mobile-title'><img src='img/sesiones.png'></a>
+			    <a href='#' class='deg315 amigos mobile-title'><img src='img/amigos.png'></a>
+				</div>
+			</div>
+		</div>
+	
+	<!-- End of Menu section -->
+
+	<!-- About 11:11 Section -->
+
+		<!-- <div class="section content-section" data-anchor="about">
+			<div class="about">
+				<h1 class="slide-title center-title">11:11</h1>
+				<div>
+					<p class="center-content">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae aliquid quae, itaque deserunt consequuntur harum quisquam placeat omnis corporis enim porro, praesentium expedita quis nesciunt laboriosam eligendi fugit dolorem."</p>
+				</div>
+				<div class="center-title push-down">
+					<a href="#menu">Volver</a>
+				</div>
+			</div>
+		</div> -->
+
+	<!-- End of About 11:11 Section -->
+	
+	<!-- Artists Section -->
+
+		<div class="section content-section" data-anchor="artistas">
+
+	 	<!-- Artists Index Slide -->
+			<div id="artistas-section" class="slide">
+				<h2 class="slide-title center-title">Artistas</h2> 
+				<div class="center-title">
+				  <a href="#menu"">Volver</a>
+				</div>
+			</div>
+	<!-- End of Artists Index Slide -->
+	
+	<!-- Trineo Slide -->
+			<div id="trineo-section" class="slide">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="slide-title">Trineo</h2>
+						<div style="margin: 50px 0px">
+							<a href="#menu">Volver</a>
+						</div>  
+					</div>
+				</div>
+
+			</div>
+	<!-- End of Trineo Slide -->
+
+	<!-- Xatarra Slide -->
+			<div id="xatarra-section" class="slide overlay">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="slide-title">Xatarra</h2> 
+						<div>
+							<iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/250462958&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+						</div>
+						<div style="margin: 50px 0px">
+							<a href="#menu">Volver</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<img src="img/banda_xatarra.jpg" class="fourhundred-image"	alt="banda xatarra">
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End of Xatarra Slide -->
+
+		<!-- Jim Hast Slide -->
+		<div id="jimhast-section" class="slide">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="slide-title">Jim Hast</h2>
+					<div>
+						<iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1011934&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+					</div>
+					<div style="margin: 50px 0px">
+						<a href="#menu">Volver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Jim Hast Slide -->
+
+		<!-- Andy Slide -->
+		<div id="andy-section" class="slide">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="slide-title">Andy</h2>
+					<div>
+						<iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/238161857&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+					</div>
+					<div style="margin: 50px 0px">
+						<a href="#menu">Volver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Andy Slide -->
+
+		<!-- Cuervo Slide -->
+		<div id="cuervo-section" class="slide">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="slide-title">Cuervo</h2>
+					<div>
+						<iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/262326705&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+					</div>
+					<div style="margin: 50px 0px">
+						<a href="#menu">Volver</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Cuervo Slide -->
+
+	</div>
+	<!-- End of Artists section -->
+	
+	<!-- Soundtracks Section -->
+
+		<div class="section content-section" data-anchor="soundtracks">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="slide-title center-title">Bandas Sonoras</h1>
+					<div id="slide-content-div" class="row" style="padding: 0px 50px; margin: auto;">
+
+						<!-- Card 1 -->
+						<div class="card" style="width: 15rem;">
+						  <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Rito de Primavera</h5>
+						    <!-- <p class="card-text">Text</p> -->
+						    <br>
+						    <a href="#" class="btn btn-dark">Sitio Web</a>
+						  </div>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="card" style="width: 15rem;">
+						  <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Impulso</h5>
+						   <!--  <p class="card-text">Text</p> -->
+						   <br>
+						    <a href="#" class="btn btn-dark">Sitio Web</a>
+						  </div>
+						</div>			
+						
+						<!-- Card 3 -->
+						<div class="card" style="width: 15rem;">
+						  <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">REC</h5>
+						    <!-- <p class="card-text">Text</p> -->
+						    <br>
+						    <a href="#" class="btn btn-dark">Sitio Web</a>
+						  </div>
+						</div>			
+
+					<!-- Card 4 -->
+						<div class="card" style="width: 15rem;">
+						  <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">El Otro</h5>
+						    <!-- <p class="card-text">Text</p> -->
+						    <br>
+						    <a href="#" class="btn btn-dark">Sitio Web</a>
+						  </div>
+						</div>
+
+					<!-- Card 5 -->
+						<div class="card" style="width: 15rem;">
+						  <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Fulgor</h5>
+						    <!-- <p class="card-text">Text</p> -->
+						    <br>
+						    <a href="#" class="btn btn-dark">Sitio Web</a>
+						  </div>
+						</div>			
+
+
+					</div>
+					<div class="center-title push-down">
+						<a href="#menu">Volver</a>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="section content-section" data-anchor="about">
-			<div class="about">
-				<h1>11:11</h1>
-				<p>Somos super shori</p>
-				<a href="#menu">Volver</a>
+	<!-- End of Artists Section -->
+
+	<!-- Start of Productions section -->
+
+		<div class="section content-section" data-anchor="amigos">
+			<div class="row">
+					<div class="col-md-12" style="padding: 0px 50px">
+						<h2 class="slide-title center-title">Producciones</h2>
+						<div id="my-accordion" class="accordion-slider" style="margin: auto">
+			        	<!-- class vertical-text in slide h3 for vertical text -->
+			        <div class="as-panels">
+			            	<div class="as-panel">
+			                <img class="as-background" src="img/kinetica_1.jpg"/>
+			                <img class="as-background-opened" src="path/to/blank.gif" data-src="img/kinetica_2.jpg" data-retina="img/kinetica_2.jpg"/>
+			                <h3 class="as-layer as-closed as-black sliding-panel-title"
+									        data-position="topLeft" data-horizontal="0%"
+									        data-show-transition="left" data-show-delay="300" data-hide-transition="right">
+									        Kinética
+									    </h3>
+									    <h2 class="as-layer as-opened as-white as-padding"
+									        data-width="420" data-horizontal="center" data-vertical="5%"
+									        data-show-transition="down" data-hide-transition="up">
+									        Emily Rose
+									    </h2>
+									    <p class="as-layer as-opened as-white as-padding"
+									        data-width="420" data-horizontal="center" data-vertical="15%"
+									        data-show-transition="down" data-hide-transition="up">
+									        Este es el texto para Emiliana
+									    </p>
+									    <div class="as-layer as-opened as-white as-padding"
+									        data-width="420" data-horizontal="center" data-vertical="25%"
+									        data-show-transition="down" data-hide-transition="up">
+									    	<!-- <iframe width="400" height="315" src="https://www.youtube.com/embed/vgBuj1tcCWU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+									    	<br>
+						    					<a href="#" class="btn btn-dark"">Sitio Web</a>
+						    					<a href="#" class="btn btn-dark"" style="display:inline">YouTube</a>
+						    					<a href="#" class="btn btn-dark"" style="display:inline">SoundCloud</a>
+									   	</div>
+			            	</div>
+
+			            <div class="as-panel">
+			                <img class="as-background" src="https://placeimg.com/640/480/arch"/>
+			                <h3 class="as-layer as-closed as-black"
+									        data-position="topLeft" data-horizontal="0%"
+									        data-show-transition="left" data-show-delay="300" data-hide-transition="right" ">
+									          &nbsp&nbspIO&nbsp&nbsp  
+									    </h3>
+									    <p class="as-layer as-opened as-white as-padding"
+									        data-width="200" data-horizontal="center" data-vertical="40%"
+									        data-show-transition="down" data-hide-transition="up">
+									        consectetur adipisicing elit
+									    </p>
+			            </div>
+			            <div class="as-panel">
+			                <img class="as-background" src="img/valemoi_1.png"/>
+			                <img class="as-background-opened cover" src="img/valemoi_2.jpg" data-src="img/valemoi_2.jpg" data-retina="img/valemoi_2.jpg" />
+			                <h3 class="as-layer as-closed as-black"
+									        data-position="topLeft" data-horizontal="0%"
+									        data-show-transition="left" data-show-delay="300" data-hide-transition="right">
+									        Vale Moï
+									    </h3>
+									    <p class="as-layer as-opened as-white as-padding"
+									        data-width="200" data-horizontal="center" data-vertical="40%"
+									        data-show-transition="down" data-hide-transition="up">
+									        consectetur adipisicing elit
+									    </p>
+			            </div>
+			            <div class="as-panel">
+			                <img class="as-background" src="img/daru_1.png"/>
+			                <img class="as-background-opened cover" src="img/daru_2.png" data-src="img/daru_2.png" data-retina="img/daru_2.png" />
+			                <h3 class="as-layer as-closed as-black"
+									        data-position="topLeft" data-horizontal="0%"
+									        data-show-transition="left" data-show-delay="300" data-hide-transition="right">
+									        Daru
+									    </h3>
+									    <p class="as-layer as-opened as-white as-padding"
+									        data-width="200" data-horizontal="center" data-vertical="40%"
+									        data-show-transition="down" data-hide-transition="up">
+									        consectetur adipisicing elit
+									    </p>
+			            </div>
+			            <div class="as-panel">
+			                <img class="as-background" src="https://placeimg.com/640/480/tech"/>
+			                <h3 class="as-layer as-closed as-black"
+									        data-position="topLeft" data-horizontal="0%"
+									        data-show-transition="left" data-show-delay="300" data-hide-transition="right">
+									        PKNT
+									    </h3>
+									    <p class="as-layer as-opened as-white as-padding"
+									        data-width="200" data-horizontal="center" data-vertical="40%"
+									        data-show-transition="down" data-hide-transition="up">
+									        consectetur adipisicing elit
+									    </p>
+			            </div>
+
+			        </div>
+		    		
+		    		</div>
 			</div>
 		</div>
-		<div class="section content-section" data-anchor="jimhast">
-				<h1>Jim Hast</h1>
-				<p>El súper DJ</p>
-				<a href="#menu">Volver</a>
+	</div>
+
+	<!-- End of Productions section -->
+
+	<!-- Sessions Section -->
+
+		<div class="section content-section" data-anchor="about">
+			<div id="artistas-section" class="slide">
+				<div class="about">
+					<h1 class="slide-title center-title">Sesiones 11:11</h1>
+					<div>
+						<p class="center-content">"Sesiones en nuestra casa."</p>
+					</div>
+					<div class="center-title push-down">
+						<a href="#menu">Volver</a>
+					</div>
+				</div>
 		</div>
-		<div class="section content-section">
-			<div class="slide"> Slide 1 </div>
-			<div class="slide"> Slide 2 </div>
-			<div class="slide"> Slide 3 </div>
-			<div class="slide"> Slide 4 </div>
-		</div>
+	
+		<div class="section content-section slide" data-anchor="about">
+				<div class="about">
+					<h1 class="slide-title center-title">Sesión 1</h1>
+					<div>
+						<p class="center-content">"Sesiones en nuestra casa."</p>
+					</div>
+					<div class="center-title push-down">
+						<a href="#menu">Volver</a>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<!-- End of Sessions Section -->
 
 </div>
 
 
-
+<script>
+	$(function(){
+    $('#slide-content-div').slimScroll({
+        height: '350px',
+		    alwaysVisible: true,
+		    color: 'coral',
+		    size: '20px',
+		    allowPageScroll: true,
+    	});
+});
+</script>
 
 
 

@@ -17,6 +17,34 @@ p {
 // .menu-mobile {
 // 	display: none;
 // }
+
+@media (max-width: 725px) {
+	
+	.fourhundred-image {
+		width: 250px;
+	}	
+
+	.menu-full {
+
+	}
+	.main-logo img {
+			width: 300px;
+			margin-left: 20px;
+
+	}
+	 .mobile-title img {
+	 	width: 150px;
+	 	margin-left: 10px;
+	 }
+
+	}
+
+
+@media (min-width: 725px) {  
+
+.fourhundred-image {
+	width: 400px;
+}	
 .menu-full {
 			margin-left: 25%;
 	}
@@ -56,6 +84,7 @@ p {
 		top: 36%!important;
 		width: 300px!important; 
 	}
+}
 
 	.contacto {
 		margin-top: 90px!important;
@@ -84,22 +113,132 @@ p {
 		left: 280px!important;
 	}
 
-	.content-section {
-		padding-left: 50px;
-	}
-	.about {
-		margin-top: 100px;
-		padding-top: 100px;
-		padding-botom: 100px;	
-	}
-
-	.jimhast-section {
-		padding-top: 100px;
-		padding-botom: 100px;
-
-	}
-
 	.content-section a {
 		decoration: none;
+		color: white;
 		font-size: 20px;
 	}
+
+	.vertical-text {
+		transform: rotate(270deg) !important;
+		font-size: 36px !important;
+		transform-origin: left top -20px;
+		padding-left: 0px;
+	}
+
+	.slide-title {
+		font-size: 60px;
+		color: coral;
+
+	}
+
+	.center-title {
+		text-align: center;
+		margin: auto;
+		padding: 10px 80px 10px 10px;
+	}
+
+	.center-content {
+		text-align: center;
+		font-size: 20px;
+		font-style: italic;
+		padding: 10px 80px 10px 10px;
+		margin: auto;
+	}
+
+	.center-link {
+		left: 46%;
+		position: relative;
+	}
+
+	.push-down {
+		margin-top: 50px;
+	}
+
+	#artistas-section {
+		padding-left: 100px;
+	}
+
+	#trineo-section {
+  	margin: auto;
+		padding-left: 100px;
+		background-position: fixed;
+		background: -webkit-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: -o-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), 
+		url('../img/fondo_trineo.jpg'); 
+		background-size: cover;
+	}
+
+	#xatarra-section {
+		padding-left: 100px;
+		background-position: fixed;
+		background: -webkit-linear-gradient(rgba(20,20,20, .8), rgba(20,20,20, .8));
+		background: -o-linear-gradient(rgba(20,20,20, .8), rgba(20,20,20, .8));
+		background: linear-gradient(rgba(20,20,20, .8), rgba(20,20,20, .8)), 
+		url('../img/fondo_xatarra.jpg'); 
+		background-size: cover;
+	}
+
+  #jimhast-section {
+  	margin: auto;
+		padding-left: 100px;
+		background-position: fixed;
+		background: -webkit-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: -o-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), 
+		url('../img/fondo_jimhast.jpg'); 
+		background-size: cover;
+	}
+
+	#cuervo-section {
+  	margin: auto;
+		padding-left: 100px;
+		background-position: fixed;
+		background: -webkit-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: -o-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), 
+		url('../img/cuervo.gif'), no-repeat; 
+		background-size: cover;
+	}
+
+	#andy-section {
+  	margin: auto;
+		padding-left: 100px;
+		background-position: fixed;
+		background: -webkit-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: -o-linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5));
+		background: linear-gradient(rgba(20,20,20, .5), rgba(20,20,20, .5)), 
+		url('../img/'); 
+		background-size: cover;
+	}
+
+	.card {
+		margin: 5px 5px;
+		border-radius: 0px;
+	}
+
+	.card-title {
+		text-align: center;
+		color: white;
+		font-size: 24px;
+	}
+
+	.card-body {
+		background-color: black;
+		width: 100%;
+	}
+
+	.btn-dark {
+		position: relative;
+		left: 55px;
+		border-radius: 0px;
+	}
+
+.accordion-slider h3 {
+	font-size: 36px!important;
+}
+
+.cover {
+	background-size: cover;
+}
